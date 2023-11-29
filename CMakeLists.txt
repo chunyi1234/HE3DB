@@ -10,7 +10,8 @@ if(CMAKE_BUILD_TYPE STREQUAL Debug)
 else() 
     set(CMAKE_CXX_FLAGS "-march=native -O3 -funroll-loops")
 ENDIF()
-
+#--------------------Export compile infomation---------------------
+set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 #--------------------------Source tree-----------------------------
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
