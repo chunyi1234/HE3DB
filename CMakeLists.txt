@@ -39,6 +39,6 @@ endif()
 #-------------------Build only a static library--------------------
 add_library(HEDB STATIC ${HEDB_SOURCE_FILES})
 target_include_directories(HEDB PUBLIC src)
-target_include_directories(HEDB PUBLIC thirdparty/SEAL/natice/src)
+target_include_directories(HEDB PRIVATE thirdparty/SEAL/natice/src)
 target_link_libraries(HEDB tfhe++ seal)
 add_subdirectory(test)
